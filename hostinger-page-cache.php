@@ -141,7 +141,7 @@ if (!class_exists('Hostinger_Page_Cache')) {
                         strpos($page, '</body>'), 0);
                 }
 
-                file_put_contents($this->path . '_index.html', str_replace(['http://', 'https://'], '//', $page),
+                file_put_contents($this->path . '_index.html', str_replace(array('http://', 'https://'), '//', $page),
                     LOCK_EX);
             } else {
                 $nocache = get_transient('hpc_nocache_pages', array());
