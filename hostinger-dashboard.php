@@ -47,5 +47,17 @@ function hostinger_admin_notice__success() {
     </div>
     <?php
 }
-add_action( 'admin_notices', 'hostinger_admin_notice__success' );
-?>
+if(!isset($_COOKIE['hostinger'])){
+    add_action( 'admin_notices', 'hostinger_admin_notice__success' );
+}
+add_action( 'admin_footer', 'hostinger_admin_notice__function' );
+function hostinger_admin_notice__function(){?>
+<script type="text/javascript">
+    jQuery(window).on('load',function($) {
+        jQuery('.notice .notice-dismiss').on('click',function(){
+            document.cookie = "hostinger=1";
+        });
+    });
+</script>
+    <?php
+}?>
