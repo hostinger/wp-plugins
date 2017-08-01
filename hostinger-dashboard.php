@@ -16,6 +16,10 @@ function hostinger_admin_notice__success() {
     <style type="text/css">
         .upgrade_button { background: #ffcf4d; border: 0; padding: 8px; color: #cb0005; font-size: 16px; border-radius: 3px; }
         .upgrade_button:hover { background: #ffcf4d; color: #cb0005 !important; }
+        .upgrade_button_red { background: #d10303; border: 1px solid #d10303 ; padding: 5px 15px 8px 15px; color: #fff; font-size: 16px; border-radius: 3px; cursor:pointer}
+        .upgrade_button_red .h2 {font-size: 18px;}
+        .upgrade_button_red .h5 {font-size: 12px;}
+        .upgrade_button_red:hover { background: #fff; color: #d10303 !important; }
         .upgrade_hostinger { text-align: center; }
         #main_content h1 { }
         #main_content .col-lg-6 { width: 50%; padding 20px; display: inline-block;}
@@ -41,8 +45,15 @@ function hostinger_admin_notice__success() {
                 <li>Daily backups, so your data will always be safe;</li>
                 <li>Fast and dedicated support ready to help you;</li>
                 <li>Migration of your current WordPress sites to Hostinger is totally free!</li>
+                <li>Try Premium Hostinger offers from $2.15</li>
             </ul>
-            <p><a class="button" href="https://www.hostinger.com/special/000webhost?utm_campaign=000-wp&utm_medium=upgrade-cta&utm_source=000" target="_blank">Begin upgrade</a></p>
+            <p>
+                <a href="https://www.hostinger.com/special/000webhost?utm_campaign=000-wp&utm_medium=upgrade-cta&utm_source=000" target="_blank">
+                    <button class="upgrade_button_red">
+                        <b class="h2">TRANSFER</b><br><span class="h5">My site to Hostinger</span>
+                    </button>
+                </a>
+            </p>
         </div>
     </div>
     <?php
