@@ -47,13 +47,13 @@ if (!class_exists('Hostinger_Links')) {
             $link_1 = sprintf('<li><a href="%s" title="%s">%s</a></li>',
                 esc_url('https://www.hostinger.com/'),
                 esc_attr__('Cheap web hosting.'),
-                'Cheap web hosting'
+                'Hostinger'
             );
 
             $link_2 = sprintf('<li><a href="%s" title="%s">%s</a></li>',
                 esc_url('https://www.000webhost.com/'),
                 esc_attr__('Free web hosting.'),
-                'Free web hosting'
+                '000webhost'
             );
             return $link_1 . $link_2;
         }
