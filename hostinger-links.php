@@ -30,8 +30,8 @@ if (!class_exists('Hostinger_Links')) {
                 foreach ($footers as $file_path) {
                     $content = file_get_contents($file_path);
                     $content = str_replace('<div class="site-info">', '<div class="site-info">'.
-                        "Powered by <a href=\"<?php echo esc_url(\'http://000webhost.com/\'); ?>\">000webhost</a> and" .
-                                    "<a href=\"<?php echo esc_url(\'http://hostinger.com/\'); ?>\">Hostigner</a> cloud"
+                        "\n Powered by <a href=\"<?php echo esc_url('http://000webhost.com/'); ?>\">000webhost</a> and " .
+                                    "<a href=\"<?php echo esc_url('http://hostinger.com/'); ?>\">Hostigner</a> cloud"
                     , $content);
                     $content = str_replace('https://wordpress.org', '', $content);
                     $content = str_replace('Proudly powered by %s', '', $content);
