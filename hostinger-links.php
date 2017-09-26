@@ -29,7 +29,7 @@ if (!class_exists('Hostinger_Links')) {
                 $footers = glob($themes . '/*/template-parts/footer/site-info.php') + glob($themes . '/*/footer.php');
                 foreach ($footers as $file_path) {
                     $content = file_get_contents($file_path);
-                    $content = str_replace('https://wordpress.org', 'https://www.hostinger.com/', $content);
+                    $content = str_replace('https://wordpress.org', 'https://www.hostinger.com', $content);
                     $content = str_replace('Proudly powered by %s', 'Proudly powered by Hostinger cloud', $content);
                     file_put_contents($file_path, $content, LOCK_EX);
                 }
