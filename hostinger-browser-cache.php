@@ -34,13 +34,13 @@ if (!class_exists('Hostinger_Browser_Cache')) {
         function htaccess_contents($rules)
         {
             $default_files = array(
-                'image/jpg' => '1 year',
-                'image/jpeg' => '1 year',
-                'image/gif' => '1 year',
-                'image/png' => '1 year',
-                'text/css' => '1 month',
-                'application/pdf' => '1 month',
-                'text/javascript' => '1 month',
+                'image/jpg' => '5 minutes',
+                'image/jpeg' => '5 minutes',
+                'image/gif' => '5 minutes',
+                'image/png' => '5 minutes',
+                'text/css' => '5 minutes',
+                'application/pdf' => '10 minutes',
+                'text/javascript' => '5 minutes',
             );
 
             $file_types = wp_parse_args(get_option('hbc_filetype_expirations', array()), $default_files);
@@ -50,7 +50,7 @@ if (!class_exists('Hostinger_Browser_Cache')) {
                 $additions .= 'ExpiresByType ' . $file_type . ' "access plus ' . $expires . '"' . "\n\t";
             }
 
-            $additions .= "ExpiresByType image/x-icon \"access plus 1 year\"\n\tExpiresDefault \"access plus 1 weeks\"\n</IfModule>\n";
+            $additions .= "ExpiresByType image/x-icon \"access plus 30 minutes\"\n\tExpiresDefault \"access plus 3 minutes\"\n</IfModule>\n";
             return $additions . $rules;
         }
 
