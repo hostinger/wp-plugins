@@ -12,7 +12,7 @@ if (!defined('WPINC')) {
     die;
 }
 
-define('HBC_VERSION', 0.1);
+define('HBC_VERSION', 0.2);
 
 
 if (!class_exists('Hostinger_Browser_Cache')) {
