@@ -306,9 +306,12 @@ if (!class_exists('Hostinger_Page_Cache')) {
         function is_enabled()
         {
 
-            $plugins = implode(' ', get_option('active_plugins'));
-            if (strpos($plugins, 'cach') || strpos($plugins, 'wp-rocket')) {
-                return false;
+            $active_plugins = get_option('active_plugins');
+            if (!empty($active_plugins) && count($active_plugins) > 0) {
+                $plugins = implode(' ', $active_plugins);
+                if (strpos($plugins, 'cach') || strpos($plugins, 'wp-rocket')) {
+                    return false;
+                }
             }
 
             $cache_settings = get_option('mm_cache_settings');
