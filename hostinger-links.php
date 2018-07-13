@@ -39,7 +39,7 @@ if (!class_exists('Hostinger_Links')) {
             );
 
             $link_2 = sprintf('<li><a href="%s" title="%s">%s</a></li>',
-                esc_url('https://www.000webhost.com/'),
+                esc_url('https://www.000webhost.com/free-hosting'),
                 esc_attr__('000webhost'),
                 '000webhost'
             );
